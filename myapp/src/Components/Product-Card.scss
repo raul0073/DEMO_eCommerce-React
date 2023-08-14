@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'calibri';
+}
+
+/*colors*/
+$appYellow: #fffce4;
+$appPeach: #fdf1ec;
+$appBrown: #56494c;
+$appGreen: cadetblue;
+$appWhite: #f4fdff;
+$appBlack: #313331;
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: .5rem;
+  background-color: white;
+  box-shadow: 0px 1px 10px grey;
+
+
+  h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    color: black;
+    cursor: pointer;
+  }
+
+
+}
+
+.prodcut-image {
+  position: relative;
+
+  img {
+    height: 200px;
+    width: 100%;
+    filter: saturate(1.2);
+    mix-blend-mode: multiply;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  span {
+    padding: .5rem;
+    font-size: 2rem;
+    float: right;
+    font-weight: 100;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+
+
+    &:hover {
+      color: red;
+      scale: 1.1;
+    }
+    &.liked{
+      color: red;
+      animation: tilt 1s linear;
+      transition: 1s ease;
+      
+      @keyframes tilt {
+        0%{
+          scale: 1.5;
+        }
+        50%{
+          scale: .9;
+        }
+        70%{
+          scale: 1.3;
+        }
+      }
+    }
+  }
+}
+
+.product-details {
+  // background-color: $appPeach;
+  padding: .3rem;
+  font-size: .8rem;
+  text-transform: capitalize;
+
+  span{
+    color: gold;
+  }
+  p.brand {
+    height: fit-content;
+    font-weight: 100;
+
+    color: $appGreen;
+
+
+  }
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  background-color: $appPeach;
+  padding: .5rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+
+  
+  p.price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: black;
+
+    &::before {
+      content: '$';
+      font-weight: 800;
+      color: black;
+
+    }
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    
+    &:hover {
+      scale: 1.1;
+      transition: .3s ease-in-out;
+    }
+  }
+
+  display: flex;
+  justify-content: space-between;
+
+}

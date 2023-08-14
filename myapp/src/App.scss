@@ -1,0 +1,414 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Corben-Bold';
+  color: #56494c;
+}
+
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*colors*/
+$appYellow: #fffce4;
+$appPeach: #fdf1ec;
+$appBrown: #56494c;
+$appGreen: cadetblue;
+$appWhite: #f4fdff;
+
+body {
+  background-color: white;
+}
+
+button {
+  background-color: transparent;
+  width: 40%;
+  padding: .3rem;
+  border-radius: 1rem;
+  border: 1px solid $appGreen;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: .5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $appGreen;
+    border-radius: 0;
+  }
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+
+
+  .promotion-bar {
+    background-color: $appBrown;
+    height: 2vh;
+    color: $appWhite;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: cadetblue;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    justify-content: space-between;
+
+    .search-input{
+      width: 40%;
+      padding: .4rem;
+      font-size: 1.1rem;
+      border-radius: 1rem;
+      border: none; 
+      outline-color: $appPeach;
+      input{
+        width: 100%;
+        padding: .8rem;
+      }
+    }
+    .cart{
+      width: fit-content;
+      padding-right: 1rem;
+      transition: .3s ease;
+
+      img{
+        width: 30px;
+        cursor: pointer;
+        transition: .3s ease;
+        margin: 0 .5rem;
+
+        &:hover{
+          transform: scale(.98);
+        }
+      }
+    }
+    .logo {
+      color: $appWhite;
+      font-weight: 800;
+      font-size: 2rem;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 1rem;
+      width: fit-content;
+    }
+  }
+
+  .products-grid {
+    width: 80%;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    height: 100%;
+    color: $appBrown;
+  }
+
+
+
+  .footer {
+    background-color: $appBrown;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    h2 {
+      color: $appWhite;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+
+.product-container {
+  width: 60%;
+  height: fit-content;
+  margin: 1rem auto;
+  margin-bottom: 30vh;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-radius: .5rem;
+  
+  &.final {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    padding: 1rem;
+
+    .img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+
+  .img {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 500px;
+
+
+      img {
+        width: 97%;
+        height: 80%;
+        border-radius: .2rem;
+        mix-blend-mode: multiply;
+      }
+    
+    
+
+  }
+
+  .details {
+    padding: .5rem;
+    width: 100%;
+
+    i{
+      margin: 1rem 0;
+    }
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+h4{
+  text-transform: uppercase;
+
+  
+}
+    h2 {
+      margin-top: 2rem;
+      font-size: 2rem;
+
+      &::before {
+        content: "$ ";
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      button{
+        width: 100%;
+        padding: .5rem .5rem;
+      }
+    }
+  }
+}
+
+
+.offers {
+  width: 1200px;
+  margin: 4rem auto;
+  border-radius: .5rem;
+  background-color: $appYellow;
+  box-shadow: 0px 0px 10px white;
+  backdrop-filter: blur(10px);
+  opacity: .9;
+  text-align: center;
+
+  h2 {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    span {
+      color: $appBrown;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+
+  img {
+    margin: 1rem;
+  }
+}
+
+.checkout-container {
+  width: 60%;
+  height: fit-content;
+  margin: 1rem auto;
+  padding: 2rem;
+
+  &.grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    form {
+      width: 100%;
+      height: 50vh;
+      border-right: .3px solid $appBrown;
+      
+      input {
+        width: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+
+}
+
+.form-content {
+
+
+  &.grid {
+    width: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    p{
+      margin: 1rem 0;
+      padding: .3rem;
+      border-bottom: .3px solid grey;
+    }
+    legend{
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .personal,
+    .address {
+      border-radius: .5rem;
+      padding: 0 .3rem;
+      display: flex;
+      flex-direction: column;
+
+      input{
+        border: none;
+        font-weight: 600;
+      }
+    }
+
+  }
+}
+
+.cart-container{
+  width: 800px;
+  min-height: 80vh;
+  margin: 1rem auto;
+
+
+  .cartGrid{
+    display: grid;
+    position: relative;
+    grid-template-columns: 20% 40% 20% 10% 10%;
+    margin: 2rem 0;
+    border-bottom: .5px solid $appBrown;
+
+    button{
+      position: absolute;
+      left: 0;
+      top: -2rem;
+      width: fit-content;
+      margin: 0;
+      margin: .3rem 0;
+      border: none;
+      padding: .3rem;
+      transition: .2s ease;
+      &:hover{
+        scale: 1.2;
+        opacity: .6;
+        background-color: transparent;
+      }
+    }
+
+    &:hover{
+      border-color: cadetblue;
+    }
+    .img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .5rem;
+
+      img{
+        width: 150px;
+        height: 110px;
+        border-radius: 1rem;
+        border: 1px solid $appBrown;
+      }
+    }
+    .name{
+      width: 100%;
+      margin: 0 1rem;
+
+      p{
+        color: cadetblue;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+    }
+    .stock{
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+
+      p{
+        color: green;
+      }
+
+        
+
+    }
+    .qty{
+      display: flex;
+      justify-content: center;
+      height: fit-content;
+      
+
+      input{
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        outline: darkcyan;
+        font-size: 1rem;
+        border: .3px solid $appBrown;
+      }
+    }
+
+    .price{
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+
+      &::before{
+        content: "$";
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+    }
+    .name,
+    .price,
+    .qty{
+      padding: .3rem;
+    }
+
+  }
+  footer{
+    text-align: end;
+    font-size: 2rem;
+    margin-bottom: 10vh;
+  }
+}

@@ -1,0 +1,50 @@
+.checkout-container {
+
+    width: 1000px;
+    height: 80vh;
+    margin: 0 auto;
+    text-align: center;
+
+    .pre-order-grid{
+        width: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    form {
+        text-align: left;
+        width: 800px;
+        margin: 1rem auto;
+
+        legend {
+            margin: .5rem 0;
+        }
+
+        .form-content {
+            padding: .2rem;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: .8rem;
+                margin: .5rem 0;
+            }
+
+            input {
+                padding: .3rem;
+                border: none;
+                border-bottom: 1px solid black;
+                font-size: 1.3rem;
+
+                background-color: transparent;
+            }
+        }
+    }
+
+    .btn-container {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
